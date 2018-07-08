@@ -17,45 +17,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let auth = requestFactory.makeAuthRequestFatory()
+        // Login
+        let auth: AuthRequestFactory = requestFactory.makeAuthRequestFatory()
         auth.login(userName: "Somebody", password: "mypassword") { response in
             switch response.result {
             case .success(let login):
-                print(login)
+                print("---\nlogin: \(login)")
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         
-        let register = requestFactory.makeRegisterRequestFatory()
-        register.signup(id: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
-            switch response.result {
-            case .success(let signup):
-                print(signup)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        
-        let exit = requestFactory.makeExitRequestFatory()
-        exit.logout(id: 123) { response in
+        // Logout
+        auth.logout { response in
             switch response.result {
             case .success(let logout):
-                print(logout)
+                print("---\nlogout: \(logout)")
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
         
-        let alter = requestFactory.makeAlterRequestFatory()
-        alter.dataChange(id: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
+        // Register
+        let register: AuthRequestFactory = requestFactory.makeAuthRequestFatory()
+        let userData = UserData(
+            id: 123,
+            userName: "Somebody",
+            password: "mypassword",
+            email: "some@some.ru",
+            gender: "m",
+            creditCard: "9872389-2424-234224-234",
+            bio: "This is good! I think I will switch to another language")
+        
+        register.register(userData: userData) { response in
             switch response.result {
-            case .success(let dataChange):
-                print(dataChange)
+            case .success(let result):
+                print("---\nregister: \(result)")
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
+        
+        // Change user data
+        let profile: ProfileRequestFactory = requestFactory.makeProfileRequestFatory()
+        
+        profile.dataChange(userData: userData) { response in
+            switch response.result {
+            case .success(let result):
+                print("---\nchange-profile: \(result)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+
         
         return true
     }

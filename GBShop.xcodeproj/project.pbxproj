@@ -19,12 +19,11 @@
 		FAA614B620F1F263005F2639 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614B520F1F263005F2639 /* ErrorParser.swift */; };
 		FAA614B820F1F354005F2639 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614B720F1F354005F2639 /* RequestRouter.swift */; };
 		FAA614BA20F1F3D9005F2639 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614B920F1F3D9005F2639 /* ResponseCodable.swift */; };
-		FAA614BC20F1FFF2005F2639 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614BB20F1FFF2005F2639 /* Register.swift */; };
-		FAA614BE20F202B9005F2639 /* RegisterRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614BD20F202B9005F2639 /* RegisterRequestFactory.swift */; };
-		FAA614C020F207DF005F2639 /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614BF20F207DF005F2639 /* Exit.swift */; };
-		FAA614C220F20897005F2639 /* ExitRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C120F20897005F2639 /* ExitRequestFactory.swift */; };
-		FAA614C420F20E66005F2639 /* Alter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C320F20E66005F2639 /* Alter.swift */; };
-		FAA614C620F20EF0005F2639 /* AlterRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C520F20EF0005F2639 /* AlterRequestFactory.swift */; };
+		FAA614C020F207DF005F2639 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614BF20F207DF005F2639 /* Profile.swift */; };
+		FAA614C220F20897005F2639 /* ProfileRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C120F20897005F2639 /* ProfileRequestFactory.swift */; };
+		FAA614C820F24D35005F2639 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C720F24D35005F2639 /* Register.swift */; };
+		FAA614CA20F24D69005F2639 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C920F24D69005F2639 /* UserData.swift */; };
+		FAA614CC20F25821005F2639 /* BaseRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614CB20F25821005F2639 /* BaseRequestFactory.swift */; };
 		FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0519620E93B3A001D2F66 /* AppDelegate.swift */; };
 		FAF0519E20E93B3A001D2F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519D20E93B3A001D2F66 /* Assets.xcassets */; };
 		FAF051A120E93B3A001D2F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519F20E93B3A001D2F66 /* LaunchScreen.storyboard */; };
@@ -67,12 +66,11 @@
 		FAA614B520F1F263005F2639 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		FAA614B720F1F354005F2639 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		FAA614B920F1F3D9005F2639 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
-		FAA614BB20F1FFF2005F2639 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
-		FAA614BD20F202B9005F2639 /* RegisterRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestFactory.swift; sourceTree = "<group>"; };
-		FAA614BF20F207DF005F2639 /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
-		FAA614C120F20897005F2639 /* ExitRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitRequestFactory.swift; sourceTree = "<group>"; };
-		FAA614C320F20E66005F2639 /* Alter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alter.swift; sourceTree = "<group>"; };
-		FAA614C520F20EF0005F2639 /* AlterRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterRequestFactory.swift; sourceTree = "<group>"; };
+		FAA614BF20F207DF005F2639 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FAA614C120F20897005F2639 /* ProfileRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequestFactory.swift; sourceTree = "<group>"; };
+		FAA614C720F24D35005F2639 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		FAA614C920F24D69005F2639 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FAA614CB20F25821005F2639 /* BaseRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestFactory.swift; sourceTree = "<group>"; };
 		FAF0519320E93B3A001D2F66 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF0519620E93B3A001D2F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF0519D20E93B3A001D2F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				FAA614AE20F1F1D9005F2639 /* User.swift */,
+				FAA614C720F24D35005F2639 /* Register.swift */,
+				FAA614C920F24D69005F2639 /* UserData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -210,13 +210,10 @@
 			isa = PBXGroup;
 			children = (
 				FAA614A820F1F15F005F2639 /* Auth.swift */,
+				FAA614BF20F207DF005F2639 /* Profile.swift */,
+				FAA614CB20F25821005F2639 /* BaseRequestFactory.swift */,
 				FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */,
-				FAA614BB20F1FFF2005F2639 /* Register.swift */,
-				FAA614BD20F202B9005F2639 /* RegisterRequestFactory.swift */,
-				FAA614BF20F207DF005F2639 /* Exit.swift */,
-				FAA614C120F20897005F2639 /* ExitRequestFactory.swift */,
-				FAA614C320F20E66005F2639 /* Alter.swift */,
-				FAA614C520F20EF0005F2639 /* AlterRequestFactory.swift */,
+				FAA614C120F20897005F2639 /* ProfileRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -505,7 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA614B420F1F248005F2639 /* AbstractRequestFactory.swift in Sources */,
-				FAA614BC20F1FFF2005F2639 /* Register.swift in Sources */,
+				FAA614C820F24D35005F2639 /* Register.swift in Sources */,
 				FAA614BA20F1F3D9005F2639 /* ResponseCodable.swift in Sources */,
 				FAA614AD20F1F1B5005F2639 /* RequestFactory.swift in Sources */,
 				FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */,
@@ -513,13 +510,12 @@
 				FAA614A920F1F15F005F2639 /* Auth.swift in Sources */,
 				FAA614B220F1F22B005F2639 /* AbstractErrorParser.swift in Sources */,
 				FAA614AF20F1F1D9005F2639 /* User.swift in Sources */,
-				FAA614BE20F202B9005F2639 /* RegisterRequestFactory.swift in Sources */,
-				FAA614C220F20897005F2639 /* ExitRequestFactory.swift in Sources */,
+				FAA614C220F20897005F2639 /* ProfileRequestFactory.swift in Sources */,
+				FAA614CA20F24D69005F2639 /* UserData.swift in Sources */,
 				FAA614AB20F1F195005F2639 /* AuthRequestFactory.swift in Sources */,
-				FAA614C420F20E66005F2639 /* Alter.swift in Sources */,
-				FAA614C620F20EF0005F2639 /* AlterRequestFactory.swift in Sources */,
-				FAA614C020F207DF005F2639 /* Exit.swift in Sources */,
+				FAA614C020F207DF005F2639 /* Profile.swift in Sources */,
 				FAA614B820F1F354005F2639 /* RequestRouter.swift in Sources */,
+				FAA614CC20F25821005F2639 /* BaseRequestFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

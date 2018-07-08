@@ -8,36 +8,24 @@
 
 import Alamofire
 
-class Auth: AbstractRequestFatory {
+class Auth: BaseRequestFactory, AuthRequestFactory {
+    func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
+        let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
     
-    let errorParser: AbstractErrorParser
-    let sessionManager: SessionManager
-    let queue: DispatchQueue?
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    func logout(completionHandler: @escaping (DataResponse<LogoutResult>) -> Void) {
+        let requestModel = Logout(baseUrl: baseUrl)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
     
-    init(
-        errorParser: AbstractErrorParser,
-        sessionManager: SessionManager,
-        queue: DispatchQueue? = DispatchQueue.global(qos: .utility)) {
-        
-        self.errorParser = errorParser
-        self.sessionManager = sessionManager
-        self.queue = queue
+    func register(userData: UserData, completionHandler: @escaping (DataResponse<SignupResult>) -> Void) {
+        let requestModel = Register(baseUrl: baseUrl, userData: userData)
+        self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-extension Auth: AuthRequestFactory {
-    
-    func login(
-        userName: String,
-        password: String,
-        completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
-        
-        let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
-        self.request(reques: requestModel, completionHandler: completionHandler)
-        
-    }
-    
+extension Auth {
     struct Login: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -51,6 +39,39 @@ extension Auth: AuthRequestFactory {
                 "username": login,
                 "password": password
             ]
+        }
+    }
+}
+
+extension Auth {
+    struct Register: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "registerUser.json"
+        
+        let userData: UserData
+        
+        var parameters: Parameters? {
+            return [
+                "username": userData.userName,
+                "password": userData.password,
+                "email": userData.email,
+                "gender": userData.gender,
+                "credit_card": userData.creditCard,
+                "bio": userData.bio
+            ]
+        }
+    }
+}
+
+extension Auth {
+    struct Logout: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "logout.json"
+        
+        var parameters: Parameters? {
+            return nil
         }
     }
 }
