@@ -8,6 +8,19 @@
 
 import Foundation
 
+struct DataChangeResult: Codable {
+    let result: Int
+}
+
+struct LogoutResult: Codable {
+    let result: Int
+}
+
+struct SignupResult: Codable {
+    let result: Int
+    let userMessage: String
+}
+
 struct LoginResult: Codable {
     let result: Int
     let user: User

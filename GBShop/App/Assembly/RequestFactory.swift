@@ -32,5 +32,32 @@ class RequestFactory {
             queue: sessionQueue
         )
     }
+    
+    func makeRegisterRequestFatory() -> RegisterRequestFactory {
+        let errorParser = makeErrorParser()
+        return Register(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue
+        )
+    }
+    
+    func makeExitRequestFatory() -> ExitRequestFactory {
+        let errorParser = makeErrorParser()
+        return Exit(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue
+        )
+    }
+    
+    func makeAlterRequestFatory() -> AlterRequestFactory {
+        let errorParser = makeErrorParser()
+        return Alter(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue
+        )
+    }
 }
 
