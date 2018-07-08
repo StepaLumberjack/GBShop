@@ -10,9 +10,11 @@
 		8490F44785E7BD2AA5CBC61B /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5650E8A5DE7FE2B8DCE85E09 /* Pods_GBShop.framework */; };
 		C04EB5D5D7547D51654CC738 /* Pods_GBShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E432D30D9A4FC63DF2558498 /* Pods_GBShopTests.framework */; };
 		E6873875526260BFAFACD22F /* Pods_GBShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4DC5608BCD550327F741BF /* Pods_GBShopUITests.framework */; };
+		FA384FE820F2753900A3ADFC /* ResposeCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */; };
+		FA384FEA20F2868100A3ADFC /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */; };
+		FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */; };
 		FAA614A920F1F15F005F2639 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614A820F1F15F005F2639 /* Auth.swift */; };
 		FAA614AB20F1F195005F2639 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */; };
-		FAA614AD20F1F1B5005F2639 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */; };
 		FAA614AF20F1F1D9005F2639 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AE20F1F1D9005F2639 /* User.swift */; };
 		FAA614B220F1F22B005F2639 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614B120F1F22B005F2639 /* AbstractErrorParser.swift */; };
 		FAA614B420F1F248005F2639 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614B320F1F248005F2639 /* AbstractRequestFactory.swift */; };
@@ -27,7 +29,6 @@
 		FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0519620E93B3A001D2F66 /* AppDelegate.swift */; };
 		FAF0519E20E93B3A001D2F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519D20E93B3A001D2F66 /* Assets.xcassets */; };
 		FAF051A120E93B3A001D2F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519F20E93B3A001D2F66 /* LaunchScreen.storyboard */; };
-		FAF051AC20E93B3A001D2F66 /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF051AB20E93B3A001D2F66 /* GBShopTests.swift */; };
 		FAF051B720E93B3A001D2F66 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF051B620E93B3A001D2F66 /* GBShopUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		9BF5C58DAE20B620DF77510F /* Pods-GBShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GBShopTests/Pods-GBShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E432D30D9A4FC63DF2558498 /* Pods_GBShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C8A5E7E6CDA00929596A30 /* Pods-GBShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GBShopUITests/Pods-GBShopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResposeCodableTests.swift; sourceTree = "<group>"; };
+		FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryMock.swift; sourceTree = "<group>"; };
 		FAA614A820F1F15F005F2639 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 		FAF051A020E93B3A001D2F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF051A220E93B3A001D2F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF051A720E93B3A001D2F66 /* GBShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAF051AB20E93B3A001D2F66 /* GBShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopTests.swift; sourceTree = "<group>"; };
 		FAF051AD20E93B3A001D2F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF051B220E93B3A001D2F66 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF051B620E93B3A001D2F66 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
@@ -274,7 +276,8 @@
 		FAF051AA20E93B3A001D2F66 /* GBShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAF051AB20E93B3A001D2F66 /* GBShopTests.swift */,
+				FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */,
+				FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */,
 				FAF051AD20E93B3A001D2F66 /* Info.plist */,
 			);
 			path = GBShopTests;
@@ -504,10 +507,10 @@
 				FAA614B420F1F248005F2639 /* AbstractRequestFactory.swift in Sources */,
 				FAA614C820F24D35005F2639 /* Register.swift in Sources */,
 				FAA614BA20F1F3D9005F2639 /* ResponseCodable.swift in Sources */,
-				FAA614AD20F1F1B5005F2639 /* RequestFactory.swift in Sources */,
 				FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */,
 				FAA614B620F1F263005F2639 /* ErrorParser.swift in Sources */,
 				FAA614A920F1F15F005F2639 /* Auth.swift in Sources */,
+				FA384FEA20F2868100A3ADFC /* RequestFactory.swift in Sources */,
 				FAA614B220F1F22B005F2639 /* AbstractErrorParser.swift in Sources */,
 				FAA614AF20F1F1D9005F2639 /* User.swift in Sources */,
 				FAA614C220F20897005F2639 /* ProfileRequestFactory.swift in Sources */,
@@ -523,7 +526,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF051AC20E93B3A001D2F66 /* GBShopTests.swift in Sources */,
+				FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */,
+				FA384FE820F2753900A3ADFC /* ResposeCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
