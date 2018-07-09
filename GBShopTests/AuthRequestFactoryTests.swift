@@ -29,7 +29,7 @@ class AuthRequestFactoryTests: XCTestCase {
         OHHTTPStubs.removeAllStubs()
     }
     
-    func testAuth() {
+    func testLogin() {
         let exp = expectation(description: "")
         
         stub(condition: isMethodGET() && pathEndsWith("login.json")) { request in
@@ -41,15 +41,66 @@ class AuthRequestFactoryTests: XCTestCase {
             )
         }
         
-        var user: LoginResult?
+        var userSession: LoginResult?
         auth.login(userName: "asdasd",
                    password: "asdasd"
         ) { result in
-            user = result.value
+            userSession = result.value
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1)
-        XCTAssertNotNil(user)
+        XCTAssertNotNil(userSession)
     }
     
+    func testLogout() {
+        let exp = expectation(description: "")
+        
+        stub(condition: isMethodGET() && pathEndsWith("logout.json")) { request in
+            let fileUrl = Bundle.main.url(forResource: "logout", withExtension: "json")!
+            return OHHTTPStubsResponse(
+                fileURL: fileUrl,
+                statusCode: 200,
+                headers: nil
+            )
+        }
+        
+        var userSession: LogoutResult?
+        auth.logout()
+            { result in
+            userSession = result.value
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+        XCTAssertNotNil(userSession)
+    }
+    
+    func testSignup() {
+        let exp = expectation(description: "")
+        
+        stub(condition: isMethodGET() && pathEndsWith("registerUser.json")) { request in
+            let fileUrl = Bundle.main.url(forResource: "registerUser", withExtension: "json")!
+            return OHHTTPStubsResponse(
+                fileURL: fileUrl,
+                statusCode: 200,
+                headers: nil
+            )
+        }
+        
+        var userSession: SignupResult?
+        let mockUser = UserData(
+            id: 123,
+            userName: "Somebody",
+            password: "mypassword",
+            email: "some@some.ru",
+            gender: "m",
+            creditCard: "9872389-2424-234224-234",
+            bio: "This is good! I think I will switch to another language")
+        auth.register(userData: mockUser)
+            { result in
+                userSession = result.value
+                exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+        XCTAssertNotNil(userSession)
+    }
 }

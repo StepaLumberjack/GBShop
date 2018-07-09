@@ -46,4 +46,22 @@ class RequestFactoryMock {
             queue: sessionQueue
             ) as? T
     }
+    
+    func makeProfileRequestFatory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return Profile(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue
+            ) as? T
+    }
+    
+    func makeShoppingRequestFatory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return Shopping(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue
+            ) as? T
+    }
 }

@@ -41,5 +41,14 @@ class RequestFactory {
             queue: sessionQueue
         ) as? T
     }
+    
+    func makeShoppingRequestFatory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return Shopping(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue
+            ) as? T
+    }
 }
 

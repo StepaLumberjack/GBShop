@@ -69,6 +69,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error)
             }
         }
+        
+        // Get products catalog
+        let shop: ShoppingRequestFactory = requestFactory.makeShoppingRequestFatory()
+        shop.getCatalog(pageNumber: 1, idCategory: 1) { response in
+            switch response.result {
+            case .success(let catalogData):
+                print("---\nget-catalog: \(catalogData)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        // Get product by ID
+        shop.getProduct(idProduct: 123) { response in
+            switch response.result {
+            case .success(let productData):
+                print("---\nget-product-by-id: \(productData)")
+            case .failure(let error):
+                print(error)
+            }
+        }
 
         
         return true
