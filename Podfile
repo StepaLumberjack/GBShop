@@ -6,6 +6,7 @@ target 'GBShop' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.7'
+  pod 'OHHTTPStubs/Swift'
 
   target 'GBShopTests' do
     inherit! :search_paths

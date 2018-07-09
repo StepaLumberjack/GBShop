@@ -7,6 +7,8 @@
 //
 
 import Alamofire
+import OHHTTPStubs
+@testable import GBShop
 
 enum ApiErrorStub: Error {
     case fatalError
@@ -30,6 +32,7 @@ class RequestFactoryMock {
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.ephemeral
         let manager = SessionManager(configuration: configuration)
+        OHHTTPStubs.isEnabled(for: configuration)
         return manager
     }()
     

@@ -13,6 +13,8 @@
 		FA384FE820F2753900A3ADFC /* ResposeCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */; };
 		FA384FEA20F2868100A3ADFC /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */; };
 		FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */; };
+		FA84DB2120F3ABA8005BD30A /* AuthRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */; };
+		FA84DB2420F3B4A4005BD30A /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB2320F3B4A4005BD30A /* login.json */; };
 		FAA614A920F1F15F005F2639 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614A820F1F15F005F2639 /* Auth.swift */; };
 		FAA614AB20F1F195005F2639 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */; };
 		FAA614AF20F1F1D9005F2639 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AE20F1F1D9005F2639 /* User.swift */; };
@@ -60,6 +62,8 @@
 		F1C8A5E7E6CDA00929596A30 /* Pods-GBShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GBShopUITests/Pods-GBShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResposeCodableTests.swift; sourceTree = "<group>"; };
 		FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryMock.swift; sourceTree = "<group>"; };
+		FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactoryTests.swift; sourceTree = "<group>"; };
+		FA84DB2320F3B4A4005BD30A /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		FAA614A820F1F15F005F2639 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		FA704C5B20EA8518009DA360 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA84DB2220F3B483005BD30A /* Stubs */,
 				FAF0519D20E93B3A001D2F66 /* Assets.xcassets */,
 				FAF0519F20E93B3A001D2F66 /* LaunchScreen.storyboard */,
 			);
@@ -206,6 +211,14 @@
 				FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FA84DB2220F3B483005BD30A /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				FA84DB2320F3B4A4005BD30A /* login.json */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		FAA614A620F1F0E0005F2639 /* Network */ = {
@@ -278,6 +291,7 @@
 			children = (
 				FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */,
 				FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */,
+				FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */,
 				FAF051AD20E93B3A001D2F66 /* Info.plist */,
 			);
 			path = GBShopTests;
@@ -405,6 +419,7 @@
 			files = (
 				FAF051A120E93B3A001D2F66 /* LaunchScreen.storyboard in Resources */,
 				FAF0519E20E93B3A001D2F66 /* Assets.xcassets in Resources */,
+				FA84DB2420F3B4A4005BD30A /* login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,10 +448,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GBShop/Pods-GBShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -527,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */,
+				FA84DB2120F3ABA8005BD30A /* AuthRequestFactoryTests.swift in Sources */,
 				FA384FE820F2753900A3ADFC /* ResposeCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
