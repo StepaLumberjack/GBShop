@@ -1,10 +1,3 @@
-//
-//  RequestFactory.swift
-//  GBShop
-//
-//  Created by macbookpro on 08.07.2018.
-//  Copyright © 2018 macbookpro. All rights reserved.
-//
 
 import Alamofire
 
@@ -45,6 +38,15 @@ class RequestFactory {
     func makeShoppingRequestFatory<T>() -> T! {
         let errorParser = makeErrorParser()
         return Shopping(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue
+            ) as? T
+    }
+    
+    func makeReviewRequestFatory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return Review(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
             queue: sessionQueue

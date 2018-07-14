@@ -1,10 +1,3 @@
-//
-//  OHHTTPStubsResponseJSONFile.swift
-//  GBShopTests
-//
-//  Created by macbookpro on 14.07.2018.
-//  Copyright © 2018 macbookpro. All rights reserved.
-//
 
 import OHHTTPStubs
 import Foundation

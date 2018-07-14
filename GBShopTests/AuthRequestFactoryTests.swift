@@ -1,10 +1,3 @@
-//
-//  AuthRequestFactoryTests.swift
-//  GBShopTests
-//
-//  Created by macbookpro on 09.07.2018.
-//  Copyright © 2018 macbookpro. All rights reserved.
-//
 
 import XCTest
 import Alamofire

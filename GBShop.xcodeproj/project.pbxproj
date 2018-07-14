@@ -15,6 +15,9 @@
 		FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */; };
 		FA4C80FF20F9A1DF00022054 /* OHHTTPStubsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */; };
 		FA4C810120F9AD3600022054 /* catalogData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA4C810020F9AD3600022054 /* catalogData.json */; };
+		FA7DCAAB20F9EC49004B9253 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAA20F9EC49004B9253 /* Comment.swift */; };
+		FA7DCAAD20F9EF31004B9253 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAC20F9EF31004B9253 /* Review.swift */; };
+		FA7DCAAF20F9F189004B9253 /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAE20F9F189004B9253 /* ReviewRequestFactory.swift */; };
 		FA84DB2120F3ABA8005BD30A /* AuthRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */; };
 		FA84DB2420F3B4A4005BD30A /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB2320F3B4A4005BD30A /* login.json */; };
 		FA84DB2620F3B853005BD30A /* logout.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB2520F3B853005BD30A /* logout.json */; };
@@ -26,6 +29,10 @@
 		FA84DB3420F3D810005BD30A /* changeUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB3320F3D810005BD30A /* changeUserData.json */; };
 		FA84DB3620F3D90E005BD30A /* getGoodById.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB3520F3D90E005BD30A /* getGoodById.json */; };
 		FA84DB3820F3D932005BD30A /* ShoppingRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84DB3720F3D932005BD30A /* ShoppingRequestFactoryTests.swift */; };
+		FA9A5E7720F9F95500DA26A6 /* addReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7620F9F95500DA26A6 /* addReview.json */; };
+		FA9A5E7920F9F98500DA26A6 /* approveReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7820F9F98500DA26A6 /* approveReview.json */; };
+		FA9A5E7D20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */; };
+		FA9A5E7F20F9FB5C00DA26A6 /* removeReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7E20F9FB5C00DA26A6 /* removeReview.json */; };
 		FAA614A920F1F15F005F2639 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614A820F1F15F005F2639 /* Auth.swift */; };
 		FAA614AB20F1F195005F2639 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */; };
 		FAA614AF20F1F1D9005F2639 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AE20F1F1D9005F2639 /* User.swift */; };
@@ -75,6 +82,9 @@
 		FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryMock.swift; sourceTree = "<group>"; };
 		FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsHelper.swift; sourceTree = "<group>"; };
 		FA4C810020F9AD3600022054 /* catalogData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = catalogData.json; sourceTree = "<group>"; };
+		FA7DCAAA20F9EC49004B9253 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		FA7DCAAC20F9EF31004B9253 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		FA7DCAAE20F9F189004B9253 /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
 		FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactoryTests.swift; sourceTree = "<group>"; };
 		FA84DB2320F3B4A4005BD30A /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		FA84DB2520F3B853005BD30A /* logout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = logout.json; sourceTree = "<group>"; };
@@ -86,6 +96,10 @@
 		FA84DB3320F3D810005BD30A /* changeUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = changeUserData.json; sourceTree = "<group>"; };
 		FA84DB3520F3D90E005BD30A /* getGoodById.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getGoodById.json; sourceTree = "<group>"; };
 		FA84DB3720F3D932005BD30A /* ShoppingRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRequestFactoryTests.swift; sourceTree = "<group>"; };
+		FA9A5E7620F9F95500DA26A6 /* addReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addReview.json; sourceTree = "<group>"; };
+		FA9A5E7820F9F98500DA26A6 /* approveReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = approveReview.json; sourceTree = "<group>"; };
+		FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactoryTests.swift; sourceTree = "<group>"; };
+		FA9A5E7E20F9FB5C00DA26A6 /* removeReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = removeReview.json; sourceTree = "<group>"; };
 		FAA614A820F1F15F005F2639 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
@@ -224,6 +238,7 @@
 				FAA614C720F24D35005F2639 /* Register.swift */,
 				FAA614C920F24D69005F2639 /* UserData.swift */,
 				FA84DB2920F3BFB1005BD30A /* Catalog.swift */,
+				FA7DCAAA20F9EC49004B9253 /* Comment.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -245,6 +260,9 @@
 				FA84DB3320F3D810005BD30A /* changeUserData.json */,
 				FA84DB3520F3D90E005BD30A /* getGoodById.json */,
 				FA4C810020F9AD3600022054 /* catalogData.json */,
+				FA9A5E7620F9F95500DA26A6 /* addReview.json */,
+				FA9A5E7820F9F98500DA26A6 /* approveReview.json */,
+				FA9A5E7E20F9FB5C00DA26A6 /* removeReview.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -255,10 +273,12 @@
 				FAA614A820F1F15F005F2639 /* Auth.swift */,
 				FAA614BF20F207DF005F2639 /* Profile.swift */,
 				FA84DB2D20F3C298005BD30A /* Shopping.swift */,
+				FA7DCAAC20F9EF31004B9253 /* Review.swift */,
 				FAA614CB20F25821005F2639 /* BaseRequestFactory.swift */,
 				FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */,
 				FAA614C120F20897005F2639 /* ProfileRequestFactory.swift */,
 				FA84DB2B20F3C16C005BD30A /* ShoppingRequestFactory.swift */,
+				FA7DCAAE20F9F189004B9253 /* ReviewRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -325,6 +345,7 @@
 				FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */,
 				FA84DB2F20F3D614005BD30A /* ProfileRequestFactoryTests.swift */,
 				FA84DB3720F3D932005BD30A /* ShoppingRequestFactoryTests.swift */,
+				FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */,
 				FAF051AD20E93B3A001D2F66 /* Info.plist */,
 			);
 			path = GBShopTests;
@@ -451,10 +472,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF051A120E93B3A001D2F66 /* LaunchScreen.storyboard in Resources */,
+				FA9A5E7920F9F98500DA26A6 /* approveReview.json in Resources */,
 				FA84DB2820F3B887005BD30A /* registerUser.json in Resources */,
 				FA84DB3420F3D810005BD30A /* changeUserData.json in Resources */,
 				FA84DB2620F3B853005BD30A /* logout.json in Resources */,
 				FAF0519E20E93B3A001D2F66 /* Assets.xcassets in Resources */,
+				FA9A5E7F20F9FB5C00DA26A6 /* removeReview.json in Resources */,
+				FA9A5E7720F9F95500DA26A6 /* addReview.json in Resources */,
 				FA4C810120F9AD3600022054 /* catalogData.json in Resources */,
 				FA84DB2420F3B4A4005BD30A /* login.json in Resources */,
 				FA84DB3620F3D90E005BD30A /* getGoodById.json in Resources */,
@@ -564,7 +588,9 @@
 				FAA614C820F24D35005F2639 /* Register.swift in Sources */,
 				FAA614BA20F1F3D9005F2639 /* ResponseCodable.swift in Sources */,
 				FA84DB2A20F3BFB1005BD30A /* Catalog.swift in Sources */,
+				FA7DCAAD20F9EF31004B9253 /* Review.swift in Sources */,
 				FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */,
+				FA7DCAAF20F9F189004B9253 /* ReviewRequestFactory.swift in Sources */,
 				FAA614B620F1F263005F2639 /* ErrorParser.swift in Sources */,
 				FAA614A920F1F15F005F2639 /* Auth.swift in Sources */,
 				FA384FEA20F2868100A3ADFC /* RequestFactory.swift in Sources */,
@@ -573,6 +599,7 @@
 				FAA614AF20F1F1D9005F2639 /* User.swift in Sources */,
 				FAA614C220F20897005F2639 /* ProfileRequestFactory.swift in Sources */,
 				FAA614CA20F24D69005F2639 /* UserData.swift in Sources */,
+				FA7DCAAB20F9EC49004B9253 /* Comment.swift in Sources */,
 				FAA614AB20F1F195005F2639 /* AuthRequestFactory.swift in Sources */,
 				FAA614C020F207DF005F2639 /* Profile.swift in Sources */,
 				FAA614B820F1F354005F2639 /* RequestRouter.swift in Sources */,
@@ -588,6 +615,7 @@
 				FA84DB3820F3D932005BD30A /* ShoppingRequestFactoryTests.swift in Sources */,
 				FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */,
 				FA84DB2120F3ABA8005BD30A /* AuthRequestFactoryTests.swift in Sources */,
+				FA9A5E7D20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift in Sources */,
 				FA384FE820F2753900A3ADFC /* ResposeCodableTests.swift in Sources */,
 				FA4C80FF20F9A1DF00022054 /* OHHTTPStubsHelper.swift in Sources */,
 			);
