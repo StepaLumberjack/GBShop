@@ -13,7 +13,7 @@ protocol ShoppingRequestFactory {
     func getCatalog(
         pageNumber: Int,
         idCategory: Int,
-        completionHandler: @escaping (DataResponse<CatalogResult>) -> Void)
+        completionHandler: @escaping (DataResponse<[CatalogResult]>) -> Void)
     
     func getProduct(
         idProduct: Int,

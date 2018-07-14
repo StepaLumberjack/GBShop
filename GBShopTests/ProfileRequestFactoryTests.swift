@@ -32,14 +32,7 @@ class ProfileRequestFactoryTests: XCTestCase {
     func testDataChange() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("changeUserData.json")) { request in
-            let fileUrl = Bundle.main.url(forResource: "changeUserData", withExtension: "json")!
-            return OHHTTPStubsResponse(
-                fileURL: fileUrl,
-                statusCode: 200,
-                headers: nil
-            )
-        }
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "changeUserData.json")
         
         var userSession: DataChangeResult?
         let mockUser = UserData(

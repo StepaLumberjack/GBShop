@@ -29,17 +29,25 @@ class ShoppingRequestFactoryTests: XCTestCase {
         OHHTTPStubs.removeAllStubs()
     }
     
+    func testGetCatalog() {
+        let exp = expectation(description: "")
+        
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "catalogData.json")
+        
+        var catalog: [CatalogResult]?
+        shop.getCatalog(pageNumber: 1, idCategory: 1
+        ) { result in
+            catalog = result.value
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+        XCTAssertNotNil(catalog)
+    }
+    
     func testGetProduct() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("getGoodById.json")) { request in
-            let fileUrl = Bundle.main.url(forResource: "getGoodById", withExtension: "json")!
-            return OHHTTPStubsResponse(
-                fileURL: fileUrl,
-                statusCode: 200,
-                headers: nil
-            )
-        }
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "getGoodById.json")
         
         var userGood: ProductResult?
         shop.getProduct(idProduct: 123

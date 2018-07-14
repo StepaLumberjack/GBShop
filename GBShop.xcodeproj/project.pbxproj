@@ -13,6 +13,8 @@
 		FA384FE820F2753900A3ADFC /* ResposeCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */; };
 		FA384FEA20F2868100A3ADFC /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */; };
 		FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */; };
+		FA4C80FF20F9A1DF00022054 /* OHHTTPStubsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */; };
+		FA4C810120F9AD3600022054 /* catalogData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA4C810020F9AD3600022054 /* catalogData.json */; };
 		FA84DB2120F3ABA8005BD30A /* AuthRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */; };
 		FA84DB2420F3B4A4005BD30A /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB2320F3B4A4005BD30A /* login.json */; };
 		FA84DB2620F3B853005BD30A /* logout.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB2520F3B853005BD30A /* logout.json */; };
@@ -71,6 +73,8 @@
 		F1C8A5E7E6CDA00929596A30 /* Pods-GBShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GBShopUITests/Pods-GBShopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResposeCodableTests.swift; sourceTree = "<group>"; };
 		FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryMock.swift; sourceTree = "<group>"; };
+		FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsHelper.swift; sourceTree = "<group>"; };
+		FA4C810020F9AD3600022054 /* catalogData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = catalogData.json; sourceTree = "<group>"; };
 		FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactoryTests.swift; sourceTree = "<group>"; };
 		FA84DB2320F3B4A4005BD30A /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		FA84DB2520F3B853005BD30A /* logout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = logout.json; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				FA84DB2720F3B887005BD30A /* registerUser.json */,
 				FA84DB3320F3D810005BD30A /* changeUserData.json */,
 				FA84DB3520F3D90E005BD30A /* getGoodById.json */,
+				FA4C810020F9AD3600022054 /* catalogData.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 		FAF051AA20E93B3A001D2F66 /* GBShopTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */,
 				FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */,
 				FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */,
 				FA84DB2020F3ABA8005BD30A /* AuthRequestFactoryTests.swift */,
@@ -449,6 +455,7 @@
 				FA84DB3420F3D810005BD30A /* changeUserData.json in Resources */,
 				FA84DB2620F3B853005BD30A /* logout.json in Resources */,
 				FAF0519E20E93B3A001D2F66 /* Assets.xcassets in Resources */,
+				FA4C810120F9AD3600022054 /* catalogData.json in Resources */,
 				FA84DB2420F3B4A4005BD30A /* login.json in Resources */,
 				FA84DB3620F3D90E005BD30A /* getGoodById.json in Resources */,
 			);
@@ -582,6 +589,7 @@
 				FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */,
 				FA84DB2120F3ABA8005BD30A /* AuthRequestFactoryTests.swift in Sources */,
 				FA384FE820F2753900A3ADFC /* ResposeCodableTests.swift in Sources */,
+				FA4C80FF20F9A1DF00022054 /* OHHTTPStubsHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Alamofire
 
 class Shopping: BaseRequestFactory, ShoppingRequestFactory {
     
-    func getCatalog(pageNumber: Int, idCategory: Int, completionHandler: @escaping (DataResponse<CatalogResult>) -> Void) {
+    func getCatalog(pageNumber: Int, idCategory: Int, completionHandler: @escaping (DataResponse<[CatalogResult]>) -> Void) {
         let requestModel = Catalog(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
