@@ -1,10 +1,3 @@
-//
-//  AuthRequestFactoryTests.swift
-//  GBShopTests
-//
-//  Created by macbookpro on 09.07.2018.
-//  Copyright © 2018 macbookpro. All rights reserved.
-//
 
 import XCTest
 import Alamofire
@@ -32,14 +25,7 @@ class AuthRequestFactoryTests: XCTestCase {
     func testLogin() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("login.json")) { request in
-            let fileUrl = Bundle.main.url(forResource: "login", withExtension: "json")!
-            return OHHTTPStubsResponse(
-                fileURL: fileUrl,
-                statusCode: 200,
-                headers: nil
-            )
-        }
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "login.json")
         
         var userSession: LoginResult?
         auth.login(userName: "asdasd",
@@ -55,14 +41,7 @@ class AuthRequestFactoryTests: XCTestCase {
     func testLogout() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("logout.json")) { request in
-            let fileUrl = Bundle.main.url(forResource: "logout", withExtension: "json")!
-            return OHHTTPStubsResponse(
-                fileURL: fileUrl,
-                statusCode: 200,
-                headers: nil
-            )
-        }
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "logout.json")
         
         var userSession: LogoutResult?
         auth.logout()
@@ -77,14 +56,7 @@ class AuthRequestFactoryTests: XCTestCase {
     func testSignup() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("registerUser.json")) { request in
-            let fileUrl = Bundle.main.url(forResource: "registerUser", withExtension: "json")!
-            return OHHTTPStubsResponse(
-                fileURL: fileUrl,
-                statusCode: 200,
-                headers: nil
-            )
-        }
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "registerUser.json")
         
         var userSession: SignupResult?
         let mockUser = UserData(

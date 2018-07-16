@@ -1,10 +1,3 @@
-//
-//  ResposeCodableTests.swift
-//  GBShopTests
-//
-//  Created by macbookpro on 08.07.2018.
-//  Copyright © 2018 macbookpro. All rights reserved.
-//
 
 import Alamofire
 import XCTest

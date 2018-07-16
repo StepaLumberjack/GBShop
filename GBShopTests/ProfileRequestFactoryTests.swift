@@ -1,10 +1,3 @@
-//
-//  ProfileRequestFactoryTests.swift
-//  GBShopTests
-//
-//  Created by macbookpro on 09.07.2018.
-//  Copyright © 2018 macbookpro. All rights reserved.
-//
 
 import XCTest
 import Alamofire
@@ -32,14 +25,7 @@ class ProfileRequestFactoryTests: XCTestCase {
     func testDataChange() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("changeUserData.json")) { request in
-            let fileUrl = Bundle.main.url(forResource: "changeUserData", withExtension: "json")!
-            return OHHTTPStubsResponse(
-                fileURL: fileUrl,
-                statusCode: 200,
-                headers: nil
-            )
-        }
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "changeUserData.json")
         
         var userSession: DataChangeResult?
         let mockUser = UserData(
