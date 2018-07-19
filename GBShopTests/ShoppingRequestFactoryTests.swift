@@ -4,6 +4,9 @@ import Alamofire
 import OHHTTPStubs
 @testable import GBShop
 
+/**
+ Тестирует API поиска списка товаров и конкретного товара, добавления/удаления из корзины, оплаты заказа
+ */
 class ShoppingRequestFactoryTests: XCTestCase {
     
     var shop: ShoppingRequestFactory!
@@ -23,6 +26,7 @@ class ShoppingRequestFactoryTests: XCTestCase {
     }
     
     func testGetCatalog() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "catalogData.json")
@@ -38,6 +42,7 @@ class ShoppingRequestFactoryTests: XCTestCase {
     }
     
     func testGetProduct() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "getGoodById.json")

@@ -1,12 +1,16 @@
 
 import Alamofire
 
+/**
+ Управляет процессом поиска и покупки товара
+ */
 class Shopping: BaseRequestFactory, ShoppingRequestFactory {
-    
+
     func getCatalog(pageNumber: Int, idCategory: Int, completionHandler: @escaping (DataResponse<[CatalogResult]>) -> Void) {
         let requestModel = Catalog(baseUrl: baseUrl, pageNumber: pageNumber, idCategory: idCategory)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
+    
     func getProduct(idProduct: Int, completionHandler: @escaping
         (DataResponse<ProductResult>) -> Void) {
         let requestModel = Product(baseUrl: baseUrl, idProduct: idProduct)
@@ -16,6 +20,7 @@ class Shopping: BaseRequestFactory, ShoppingRequestFactory {
 
 extension Shopping {
     
+    // MARK: - List of products request router
     struct Catalog: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -32,6 +37,7 @@ extension Shopping {
         }
     }
     
+    // MARK: - Certain product request router
     struct Product: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get

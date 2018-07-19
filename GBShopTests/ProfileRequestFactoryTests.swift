@@ -4,6 +4,9 @@ import Alamofire
 import OHHTTPStubs
 @testable import GBShop
 
+/**
+ Тестирует API управления профилем пользователя
+ */
 class ProfileRequestFactoryTests: XCTestCase {
     
     var profile: ProfileRequestFactory!
@@ -23,6 +26,7 @@ class ProfileRequestFactoryTests: XCTestCase {
     }
     
     func testDataChange() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "changeUserData.json")

@@ -1,6 +1,9 @@
 
 import Alamofire
 
+/**
+ Управляет профилем пользователя
+ */
 class Profile: BaseRequestFactory, ProfileRequestFactory {
     
     func dataChange(userData: UserData, completionHandler: @escaping (DataResponse<DataChangeResult>) -> Void) {
@@ -9,7 +12,9 @@ class Profile: BaseRequestFactory, ProfileRequestFactory {
     }
 }
 
+// MARK: - Profile alteration request router
 extension Profile {
+    
     struct Profile: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
