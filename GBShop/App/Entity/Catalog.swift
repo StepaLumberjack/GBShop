@@ -1,6 +1,10 @@
 
 import Foundation
 
+struct SuccessResult: Codable {
+    let result: Int
+}
+
 struct ProductResult: Codable {
     let result: Int
     let product_name: String

@@ -56,4 +56,52 @@ class ShoppingRequestFactoryTests: XCTestCase {
         wait(for: [exp], timeout: 1)
         XCTAssertNotNil(userGood)
     }
+    
+    func testAddToCart() {
+        
+        let exp = expectation(description: "")
+        
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "addToBasket.json")
+        
+        var fillingResult: SuccessResult?
+        shop.addToCart(idProduct: 123,quantity: 2) {
+            result in
+            fillingResult = result.value
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+        XCTAssertNotNil(fillingResult)
+    }
+    
+    func testRemoveFromCart() {
+        
+        let exp = expectation(description: "")
+        
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "deleteFromBasket.json")
+        
+        var clearenceResult: SuccessResult?
+        shop.removeFromCart(idProduct: 123) {
+            result in
+            clearenceResult = result.value
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+        XCTAssertNotNil(clearenceResult)
+    }
+    
+    func testPayOrder() {
+        
+        let exp = expectation(description: "")
+        
+        OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "payOrder.json")
+        
+        var paymentResult: SuccessResult?
+        shop.payOrder(idOrder: 304947) {
+            result in
+            paymentResult = result.value
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+        XCTAssertNotNil(paymentResult)
+    }
 }

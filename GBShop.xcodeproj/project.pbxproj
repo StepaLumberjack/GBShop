@@ -46,6 +46,9 @@
 		FAA614C820F24D35005F2639 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C720F24D35005F2639 /* Register.swift */; };
 		FAA614CA20F24D69005F2639 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C920F24D69005F2639 /* UserData.swift */; };
 		FAA614CC20F25821005F2639 /* BaseRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614CB20F25821005F2639 /* BaseRequestFactory.swift */; };
+		FAB3E26F210083A1002871A3 /* addToBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E26E210083A1002871A3 /* addToBasket.json */; };
+		FAB3E271210083C1002871A3 /* deleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E270210083C1002871A3 /* deleteFromBasket.json */; };
+		FAB3E273210083EC002871A3 /* payOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E272210083EC002871A3 /* payOrder.json */; };
 		FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0519620E93B3A001D2F66 /* AppDelegate.swift */; };
 		FAF0519E20E93B3A001D2F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519D20E93B3A001D2F66 /* Assets.xcassets */; };
 		FAF051A120E93B3A001D2F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519F20E93B3A001D2F66 /* LaunchScreen.storyboard */; };
@@ -114,6 +117,9 @@
 		FAA614C720F24D35005F2639 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FAA614C920F24D69005F2639 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FAA614CB20F25821005F2639 /* BaseRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestFactory.swift; sourceTree = "<group>"; };
+		FAB3E26E210083A1002871A3 /* addToBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addToBasket.json; sourceTree = "<group>"; };
+		FAB3E270210083C1002871A3 /* deleteFromBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = deleteFromBasket.json; sourceTree = "<group>"; };
+		FAB3E272210083EC002871A3 /* payOrder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payOrder.json; sourceTree = "<group>"; };
 		FAF0519320E93B3A001D2F66 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF0519620E93B3A001D2F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF0519D20E93B3A001D2F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -263,6 +269,9 @@
 				FA9A5E7620F9F95500DA26A6 /* addReview.json */,
 				FA9A5E7820F9F98500DA26A6 /* approveReview.json */,
 				FA9A5E7E20F9FB5C00DA26A6 /* removeReview.json */,
+				FAB3E26E210083A1002871A3 /* addToBasket.json */,
+				FAB3E270210083C1002871A3 /* deleteFromBasket.json */,
+				FAB3E272210083EC002871A3 /* payOrder.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -473,6 +482,8 @@
 			files = (
 				FAF051A120E93B3A001D2F66 /* LaunchScreen.storyboard in Resources */,
 				FA9A5E7920F9F98500DA26A6 /* approveReview.json in Resources */,
+				FAB3E26F210083A1002871A3 /* addToBasket.json in Resources */,
+				FAB3E273210083EC002871A3 /* payOrder.json in Resources */,
 				FA84DB2820F3B887005BD30A /* registerUser.json in Resources */,
 				FA84DB3420F3D810005BD30A /* changeUserData.json in Resources */,
 				FA84DB2620F3B853005BD30A /* logout.json in Resources */,
@@ -481,6 +492,7 @@
 				FA9A5E7720F9F95500DA26A6 /* addReview.json in Resources */,
 				FA4C810120F9AD3600022054 /* catalogData.json in Resources */,
 				FA84DB2420F3B4A4005BD30A /* login.json in Resources */,
+				FAB3E271210083C1002871A3 /* deleteFromBasket.json in Resources */,
 				FA84DB3620F3D90E005BD30A /* getGoodById.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
