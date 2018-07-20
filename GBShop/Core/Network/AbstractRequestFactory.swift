@@ -1,7 +1,11 @@
 
 import Alamofire
 
+/**
+ Предоставляет реализацию сетевого запроса по умолчанию
+ */
 protocol AbstractRequestFatory {
+    
     var errorParser: AbstractErrorParser { get }
     var sessionManager: SessionManager { get }
     var queue: DispatchQueue? { get }

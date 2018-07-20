@@ -1,7 +1,11 @@
 
 import Alamofire
 
+/**
+ Выполняет авторизацию пользователя на сервере
+ */
 class Auth: BaseRequestFactory, AuthRequestFactory {
+    
     func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
         let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
         self.request(request: requestModel, completionHandler: completionHandler)
@@ -18,7 +22,9 @@ class Auth: BaseRequestFactory, AuthRequestFactory {
     }
 }
 
+// MARK: - Login request router
 extension Auth {
+    
     struct Login: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -36,6 +42,7 @@ extension Auth {
     }
 }
 
+// MARK: - Register request router
 extension Auth {
     struct Register: RequestRouter {
         let baseUrl: URL
@@ -57,6 +64,7 @@ extension Auth {
     }
 }
 
+// MARK: - Logout request router
 extension Auth {
     struct Logout: RequestRouter {
         let baseUrl: URL

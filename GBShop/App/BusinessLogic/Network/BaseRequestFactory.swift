@@ -2,11 +2,14 @@
 import Alamofire
 
 class BaseRequestFactory: AbstractRequestFatory{
+    
+    // MARK: - Properties
     let errorParser: AbstractErrorParser
     let sessionManager: SessionManager
     let queue: DispatchQueue?
     let baseUrl: URL! = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")
     
+    // MARK: - Initializers
     init (
         errorParser: AbstractErrorParser,
         sessionManager: SessionManager,

@@ -4,6 +4,9 @@ import Alamofire
 import OHHTTPStubs
 @testable import GBShop
 
+/**
+ Тестирует API добавления/одобрения/удаления отзывов о товаре
+ */
 class ReviewRequestFactoryTests: XCTestCase {
     
     var review: ReviewRequestFactory!
@@ -23,6 +26,7 @@ class ReviewRequestFactoryTests: XCTestCase {
     }
     
     func testAddReview() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "addReview.json")
@@ -38,6 +42,7 @@ class ReviewRequestFactoryTests: XCTestCase {
     }
     
     func testApproveReview() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "approveReview.json")
@@ -53,6 +58,7 @@ class ReviewRequestFactoryTests: XCTestCase {
     }
     
     func testRemoveReview() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "removeReview.json")

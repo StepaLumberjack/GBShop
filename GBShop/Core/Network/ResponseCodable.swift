@@ -2,6 +2,11 @@
 import Alamofire
 
 extension DataRequest {
+    
+    /**
+     Создает пользовательский `JSON` сериализатор и передает его в `Alamofire`
+     для распаковки ответа сервера
+     */
     @discardableResult
     func responseCodable<T: Decodable>(
         errorParser: AbstractErrorParser,

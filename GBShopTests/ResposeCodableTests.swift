@@ -11,6 +11,7 @@ struct PostStub: Codable {
 }
 
 class ResponseCodableTests: XCTestCase {
+    
     var errorParser: ErrorParserStub!
     
     override func setUp() {

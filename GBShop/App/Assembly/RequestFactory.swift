@@ -1,12 +1,12 @@
 
 import Alamofire
 
+/**
+ Подготавливает и предоставляет реализации конкретных `request` менеджеров
+ */
 class RequestFactory {
     
-    func makeErrorParser() -> AbstractErrorParser {
-        return ErrorParser()
-    }
-    
+    // MARK: - Fields
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpShouldSetCookies = false
@@ -17,8 +17,16 @@ class RequestFactory {
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
     
+    // MARK: - Functions
+    func makeErrorParser() -> AbstractErrorParser {
+        
+        return ErrorParser()
+    }
+    
     func makeAuthRequestFatory<T>() -> T! {
+        
         let errorParser = makeErrorParser()
+        
         return Auth(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
@@ -27,7 +35,9 @@ class RequestFactory {
     }
     
     func makeProfileRequestFatory<T>() -> T! {
+        
         let errorParser = makeErrorParser()
+        
         return Profile(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
@@ -36,7 +46,9 @@ class RequestFactory {
     }
     
     func makeShoppingRequestFatory<T>() -> T! {
+        
         let errorParser = makeErrorParser()
+        
         return Shopping(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
@@ -45,7 +57,9 @@ class RequestFactory {
     }
     
     func makeReviewRequestFatory<T>() -> T! {
+        
         let errorParser = makeErrorParser()
+        
         return Review(
             errorParser: errorParser,
             sessionManager: commonSessionManager,

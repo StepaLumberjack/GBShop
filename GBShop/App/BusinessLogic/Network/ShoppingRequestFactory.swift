@@ -11,4 +11,17 @@ protocol ShoppingRequestFactory {
     func getProduct(
         idProduct: Int,
         completionHandler: @escaping (DataResponse<ProductResult>) -> Void)
+    
+    func addToCart(
+        idProduct: Int,
+        quantity: Int,
+        completionHandler: @escaping (DataResponse<SuccessResult>) -> Void)
+    
+    func removeFromCart(
+        idProduct: Int,
+        completionHandler: @escaping (DataResponse<SuccessResult>) -> Void)
+    
+    func payOrder(
+        idOrder: Int,
+        completionHandler: @escaping (DataResponse<SuccessResult>) -> Void)
 }

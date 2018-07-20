@@ -4,6 +4,9 @@ import Alamofire
 import OHHTTPStubs
 @testable import GBShop
 
+/**
+ Тестирует API аутентификации пользователя на сайте
+ */
 class AuthRequestFactoryTests: XCTestCase {
     
     var auth: AuthRequestFactory!
@@ -23,6 +26,7 @@ class AuthRequestFactoryTests: XCTestCase {
     }
     
     func testLogin() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "login.json")
@@ -39,6 +43,7 @@ class AuthRequestFactoryTests: XCTestCase {
     }
     
     func testLogout() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "logout.json")
@@ -54,6 +59,7 @@ class AuthRequestFactoryTests: XCTestCase {
     }
     
     func testSignup() {
+        
         let exp = expectation(description: "")
         
         OHHTTPStubsResponse.stubResponseByPathEnd(pathEnd: "registerUser.json")

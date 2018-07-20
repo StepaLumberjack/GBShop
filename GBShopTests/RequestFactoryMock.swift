@@ -8,20 +8,22 @@ enum ApiErrorStub: Error {
 }
 
 struct ErrorParserStub: AbstractErrorParser {
+    
     func parse(_ result: Error) -> Error {
         return ApiErrorStub.fatalError
     }
+    
     func parse(response: HTTPURLResponse?, data: Data?, error: Error?) -> Error? {
         return error
     }
 }
 
+/**
+ Подготавливает и предоставляет реализации конкретных `request` менеджеров
+ */
 class RequestFactoryMock {
     
-    func makeErrorParser() -> AbstractErrorParser {
-        return ErrorParserStub()
-    }
-    
+    // MARK: - Fields
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.ephemeral
         let manager = SessionManager(configuration: configuration)
@@ -30,6 +32,11 @@ class RequestFactoryMock {
     }()
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
+    
+    // MARK: - Functions
+    func makeErrorParser() -> AbstractErrorParser {
+        return ErrorParserStub()
+    }
     
     func makeAuthRequestFatory<T>() -> T! {
         let errorParser = makeErrorParser()
