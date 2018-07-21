@@ -15,6 +15,7 @@
 		FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */; };
 		FA4C80FF20F9A1DF00022054 /* OHHTTPStubsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */; };
 		FA4C810120F9AD3600022054 /* catalogData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA4C810020F9AD3600022054 /* catalogData.json */; };
+		FA59A4752103491900315078 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59A4742103491900315078 /* Storyboard.storyboard */; };
 		FA7DCAAB20F9EC49004B9253 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAA20F9EC49004B9253 /* Comment.swift */; };
 		FA7DCAAD20F9EF31004B9253 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAC20F9EF31004B9253 /* Review.swift */; };
 		FA7DCAAF20F9F189004B9253 /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAE20F9F189004B9253 /* ReviewRequestFactory.swift */; };
@@ -85,6 +86,7 @@
 		FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryMock.swift; sourceTree = "<group>"; };
 		FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsHelper.swift; sourceTree = "<group>"; };
 		FA4C810020F9AD3600022054 /* catalogData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = catalogData.json; sourceTree = "<group>"; };
+		FA59A4742103491900315078 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		FA7DCAAA20F9EC49004B9253 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		FA7DCAAC20F9EF31004B9253 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FA7DCAAE20F9F189004B9253 /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		FA704C5920EA850C009DA360 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				FA59A4742103491900315078 /* Storyboard.storyboard */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				FA84DB2420F3B4A4005BD30A /* login.json in Resources */,
 				FAB3E271210083C1002871A3 /* deleteFromBasket.json in Resources */,
 				FA84DB3620F3D90E005BD30A /* getGoodById.json in Resources */,
+				FA59A4752103491900315078 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
