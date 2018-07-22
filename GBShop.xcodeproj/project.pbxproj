@@ -50,6 +50,7 @@
 		FAB3E26F210083A1002871A3 /* addToBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E26E210083A1002871A3 /* addToBasket.json */; };
 		FAB3E271210083C1002871A3 /* deleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E270210083C1002871A3 /* deleteFromBasket.json */; };
 		FAB3E273210083EC002871A3 /* payOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E272210083EC002871A3 /* payOrder.json */; };
+		FABFFF222103783A00D5B624 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFFF212103783A00D5B624 /* ChoiceViewController.swift */; };
 		FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0519620E93B3A001D2F66 /* AppDelegate.swift */; };
 		FAF0519E20E93B3A001D2F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519D20E93B3A001D2F66 /* Assets.xcassets */; };
 		FAF051A120E93B3A001D2F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519F20E93B3A001D2F66 /* LaunchScreen.storyboard */; };
@@ -122,6 +123,7 @@
 		FAB3E26E210083A1002871A3 /* addToBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addToBasket.json; sourceTree = "<group>"; };
 		FAB3E270210083C1002871A3 /* deleteFromBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = deleteFromBasket.json; sourceTree = "<group>"; };
 		FAB3E272210083EC002871A3 /* payOrder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payOrder.json; sourceTree = "<group>"; };
+		FABFFF212103783A00D5B624 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		FAF0519320E93B3A001D2F66 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF0519620E93B3A001D2F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF0519D20E93B3A001D2F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				FA59A4742103491900315078 /* Storyboard.storyboard */,
+				FABFFF212103783A00D5B624 /* ChoiceViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				FAA614C020F207DF005F2639 /* Profile.swift in Sources */,
 				FAA614B820F1F354005F2639 /* RequestRouter.swift in Sources */,
 				FAA614CC20F25821005F2639 /* BaseRequestFactory.swift in Sources */,
+				FABFFF222103783A00D5B624 /* ChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
