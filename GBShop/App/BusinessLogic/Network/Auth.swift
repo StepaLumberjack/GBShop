@@ -44,6 +44,7 @@ extension Auth {
 
 // MARK: - Register request router
 extension Auth {
+    
     struct Register: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -66,6 +67,7 @@ extension Auth {
 
 // MARK: - Logout request router
 extension Auth {
+    
     struct Logout: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get

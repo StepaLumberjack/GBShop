@@ -15,6 +15,7 @@
 		FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */; };
 		FA4C80FF20F9A1DF00022054 /* OHHTTPStubsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */; };
 		FA4C810120F9AD3600022054 /* catalogData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA4C810020F9AD3600022054 /* catalogData.json */; };
+		FA59A4752103491900315078 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59A4742103491900315078 /* Storyboard.storyboard */; };
 		FA7DCAAB20F9EC49004B9253 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAA20F9EC49004B9253 /* Comment.swift */; };
 		FA7DCAAD20F9EF31004B9253 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAC20F9EF31004B9253 /* Review.swift */; };
 		FA7DCAAF20F9F189004B9253 /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7DCAAE20F9F189004B9253 /* ReviewRequestFactory.swift */; };
@@ -49,6 +50,7 @@
 		FAB3E26F210083A1002871A3 /* addToBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E26E210083A1002871A3 /* addToBasket.json */; };
 		FAB3E271210083C1002871A3 /* deleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E270210083C1002871A3 /* deleteFromBasket.json */; };
 		FAB3E273210083EC002871A3 /* payOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E272210083EC002871A3 /* payOrder.json */; };
+		FABFFF222103783A00D5B624 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFFF212103783A00D5B624 /* ChoiceViewController.swift */; };
 		FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0519620E93B3A001D2F66 /* AppDelegate.swift */; };
 		FAF0519E20E93B3A001D2F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519D20E93B3A001D2F66 /* Assets.xcassets */; };
 		FAF051A120E93B3A001D2F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF0519F20E93B3A001D2F66 /* LaunchScreen.storyboard */; };
@@ -85,6 +87,7 @@
 		FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryMock.swift; sourceTree = "<group>"; };
 		FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsHelper.swift; sourceTree = "<group>"; };
 		FA4C810020F9AD3600022054 /* catalogData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = catalogData.json; sourceTree = "<group>"; };
+		FA59A4742103491900315078 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		FA7DCAAA20F9EC49004B9253 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		FA7DCAAC20F9EF31004B9253 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FA7DCAAE20F9F189004B9253 /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 		FAB3E26E210083A1002871A3 /* addToBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addToBasket.json; sourceTree = "<group>"; };
 		FAB3E270210083C1002871A3 /* deleteFromBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = deleteFromBasket.json; sourceTree = "<group>"; };
 		FAB3E272210083EC002871A3 /* payOrder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payOrder.json; sourceTree = "<group>"; };
+		FABFFF212103783A00D5B624 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		FAF0519320E93B3A001D2F66 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF0519620E93B3A001D2F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF0519D20E93B3A001D2F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 		FA704C5920EA850C009DA360 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				FA59A4742103491900315078 /* Storyboard.storyboard */,
+				FABFFF212103783A00D5B624 /* ChoiceViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -494,6 +500,7 @@
 				FA84DB2420F3B4A4005BD30A /* login.json in Resources */,
 				FAB3E271210083C1002871A3 /* deleteFromBasket.json in Resources */,
 				FA84DB3620F3D90E005BD30A /* getGoodById.json in Resources */,
+				FA59A4752103491900315078 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +623,7 @@
 				FAA614C020F207DF005F2639 /* Profile.swift in Sources */,
 				FAA614B820F1F354005F2639 /* RequestRouter.swift in Sources */,
 				FAA614CC20F25821005F2639 /* BaseRequestFactory.swift in Sources */,
+				FABFFF222103783A00D5B624 /* ChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
