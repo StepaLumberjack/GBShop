@@ -26,9 +26,9 @@
 		<true/>
 	</dict>
 	<key>UILaunchStoryboardName</key>
-	<string>Storyboard</string>
+	<string>Auth</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Storyboard</string>
+	<string>Auth</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
