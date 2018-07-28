@@ -37,6 +37,8 @@
 		FA9A5E7920F9F98500DA26A6 /* approveReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7820F9F98500DA26A6 /* approveReview.json */; };
 		FA9A5E7D20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */; };
 		FA9A5E7F20F9FB5C00DA26A6 /* removeReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7E20F9FB5C00DA26A6 /* removeReview.json */; };
+		FA9CE3E4210CC3D0004F88DA /* CatalogViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE3E3210CC3D0004F88DA /* CatalogViewCell.swift */; };
+		FA9CE3E6210CC52F004F88DA /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CE3E5210CC52F004F88DA /* CatalogViewController.swift */; };
 		FAA614A920F1F15F005F2639 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614A820F1F15F005F2639 /* Auth.swift */; };
 		FAA614AB20F1F195005F2639 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */; };
 		FAA614AF20F1F1D9005F2639 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AE20F1F1D9005F2639 /* User.swift */; };
@@ -111,6 +113,8 @@
 		FA9A5E7820F9F98500DA26A6 /* approveReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = approveReview.json; sourceTree = "<group>"; };
 		FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactoryTests.swift; sourceTree = "<group>"; };
 		FA9A5E7E20F9FB5C00DA26A6 /* removeReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = removeReview.json; sourceTree = "<group>"; };
+		FA9CE3E3210CC3D0004F88DA /* CatalogViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewCell.swift; sourceTree = "<group>"; };
+		FA9CE3E5210CC52F004F88DA /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		FAA614A820F1F15F005F2639 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FAA614AA20F1F195005F2639 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
@@ -192,6 +196,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA5E0E05210C77D400E19969 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CD4EC2108DA6600639FFC /* AuthViewController.swift */,
+				FA9CE3E5210CC52F004F88DA /* CatalogViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA5E0E06210C78D700E19969 /* DataTransferObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataTransferObjects;
+			sourceTree = "<group>";
+		};
 		FA704C5820EA84F8009DA360 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +226,9 @@
 		FA704C5920EA850C009DA360 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				FA7CD4E92108D60D00639FFC /* Auth */,
+				FA9CE3E2210CC3AB004F88DA /* ViewCells */,
+				FA5E0E05210C77D400E19969 /* ViewControllers */,
+				FA7CD4E92108D60D00639FFC /* Storyboards */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -251,6 +273,7 @@
 		FA704C5F20EA855A009DA360 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				FA5E0E06210C78D700E19969 /* DataTransferObjects */,
 				FAA614AE20F1F1D9005F2639 /* User.swift */,
 				FAA614C720F24D35005F2639 /* Register.swift */,
 				FAA614C920F24D69005F2639 /* UserData.swift */,
@@ -268,13 +291,12 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		FA7CD4E92108D60D00639FFC /* Auth */ = {
+		FA7CD4E92108D60D00639FFC /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				FA7CD4EA2108D62D00639FFC /* Auth.storyboard */,
-				FA7CD4EC2108DA6600639FFC /* AuthViewController.swift */,
 			);
-			path = Auth;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		FA7CD4F02108DF7900639FFC /* Utils */ = {
@@ -302,6 +324,14 @@
 				FAB3E272210083EC002871A3 /* payOrder.json */,
 			);
 			path = Stubs;
+			sourceTree = "<group>";
+		};
+		FA9CE3E2210CC3AB004F88DA /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA9CE3E3210CC3D0004F88DA /* CatalogViewCell.swift */,
+			);
+			path = ViewCells;
 			sourceTree = "<group>";
 		};
 		FAA614A620F1F0E0005F2639 /* Network */ = {
@@ -464,7 +494,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = macbookpro;
 				TargetAttributes = {
 					FAF0519220E93B3A001D2F66 = {
@@ -626,6 +656,7 @@
 			files = (
 				FA7CD4ED2108DA6600639FFC /* AuthViewController.swift in Sources */,
 				FAA614B420F1F248005F2639 /* AbstractRequestFactory.swift in Sources */,
+				FA9CE3E6210CC52F004F88DA /* CatalogViewController.swift in Sources */,
 				FA7CD4F22108DF9100639FFC /* StryboardUtils.swift in Sources */,
 				FA84DB2E20F3C298005BD30A /* Shopping.swift in Sources */,
 				FA7CD4EF2108DF4E00639FFC /* ViewControllerExtension.swift in Sources */,
@@ -638,6 +669,7 @@
 				FAA614B620F1F263005F2639 /* ErrorParser.swift in Sources */,
 				FAA614A920F1F15F005F2639 /* Auth.swift in Sources */,
 				FA384FEA20F2868100A3ADFC /* RequestFactory.swift in Sources */,
+				FA9CE3E4210CC3D0004F88DA /* CatalogViewCell.swift in Sources */,
 				FAA614B220F1F22B005F2639 /* AbstractErrorParser.swift in Sources */,
 				FA84DB2C20F3C16C005BD30A /* ShoppingRequestFactory.swift in Sources */,
 				FAA614AF20F1F1D9005F2639 /* User.swift in Sources */,
@@ -714,6 +746,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -721,6 +754,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -771,6 +805,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -778,6 +813,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
