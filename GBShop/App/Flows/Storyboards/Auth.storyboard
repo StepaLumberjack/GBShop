@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="29.23538230884558"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="wuE-8p-usq">
             <objects>
-                <viewController id="wBK-e7-uyz" sceneMemberID="viewController">
+                <viewController id="wBK-e7-uyz" customClass="RegisterViewController" customModule="GBShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ds-Oi-BiF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,6 +151,9 @@
                                     <constraint firstAttribute="height" constant="35" id="R0V-Ge-JQB"/>
                                 </constraints>
                                 <state key="normal" title="Рега"/>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="wBK-e7-uyz" eventType="touchUpInside" id="9p4-Ki-MR7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,7 +182,13 @@
                         <viewLayoutGuide key="safeArea" id="uaS-9f-kOm"/>
                     </view>
                     <connections>
-                        <segue destination="LQL-NR-8Oe" kind="show" id="mgT-4Q-xIU"/>
+                        <outlet property="bio" destination="0rj-HH-c6Y" id="SqY-9s-Qta"/>
+                        <outlet property="creditCard" destination="gXI-rr-oTu" id="C7V-fk-uha"/>
+                        <outlet property="email" destination="aoa-tY-7Mm" id="C5E-gL-wtl"/>
+                        <outlet property="gender" destination="Ruu-c8-Md3" id="LB6-8F-AE2"/>
+                        <outlet property="password" destination="ndT-Z9-cTd" id="99n-TY-sKR"/>
+                        <outlet property="username" destination="q67-lZ-PAg" id="0dl-1n-aPp"/>
+                        <segue destination="LQL-NR-8Oe" kind="show" identifier="showChoiceFromRegister" id="mgT-4Q-xIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyj-xu-r80" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="962" y="-563"/>
         </scene>
-        <!--View Controller-->
+        <!--Choice View Controller-->
         <scene sceneID="CWa-RP-BTJ">
             <objects>
-                <viewController id="cER-15-ZLB" sceneMemberID="viewController">
+                <viewController id="cER-15-ZLB" userLabel="Choice View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OUh-Ae-nTr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
