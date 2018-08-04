@@ -10,6 +10,10 @@
 		8490F44785E7BD2AA5CBC61B /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5650E8A5DE7FE2B8DCE85E09 /* Pods_GBShop.framework */; };
 		C04EB5D5D7547D51654CC738 /* Pods_GBShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E432D30D9A4FC63DF2558498 /* Pods_GBShopTests.framework */; };
 		E6873875526260BFAFACD22F /* Pods_GBShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4DC5608BCD550327F741BF /* Pods_GBShopUITests.framework */; };
+		FA29956B2115A33000AD8ABD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29956A2115A33000AD8ABD /* ProfileViewController.swift */; };
+		FA29956D2115AA5F00AD8ABD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29956C2115AA5F00AD8ABD /* TabBarController.swift */; };
+		FA29956F2115AE0200AD8ABD /* DataChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29956E2115AE0200AD8ABD /* DataChangeViewController.swift */; };
+		FA2995742115BB8700AD8ABD /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2995732115BB8700AD8ABD /* ProductViewController.swift */; };
 		FA384FE820F2753900A3ADFC /* ResposeCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */; };
 		FA384FEA20F2868100A3ADFC /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614AC20F1F1B5005F2639 /* RequestFactory.swift */; };
 		FA384FEC20F286AF00A3ADFC /* RequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */; };
@@ -88,6 +92,10 @@
 		9BF5C58DAE20B620DF77510F /* Pods-GBShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GBShopTests/Pods-GBShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E432D30D9A4FC63DF2558498 /* Pods_GBShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C8A5E7E6CDA00929596A30 /* Pods-GBShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GBShopUITests/Pods-GBShopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA29956A2115A33000AD8ABD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FA29956C2115AA5F00AD8ABD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FA29956E2115AE0200AD8ABD /* DataChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataChangeViewController.swift; sourceTree = "<group>"; };
+		FA2995732115BB8700AD8ABD /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		FA384FE720F2753900A3ADFC /* ResposeCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResposeCodableTests.swift; sourceTree = "<group>"; };
 		FA384FEB20F286AF00A3ADFC /* RequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryMock.swift; sourceTree = "<group>"; };
 		FA4C80FE20F9A1DF00022054 /* OHHTTPStubsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHHTTPStubsHelper.swift; sourceTree = "<group>"; };
@@ -198,12 +206,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA2995702115B08400AD8ABD /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Segues;
+			sourceTree = "<group>";
+		};
 		FA5E0E05210C77D400E19969 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				FA7CD4EC2108DA6600639FFC /* AuthViewController.swift */,
-				FA9CE3E5210CC52F004F88DA /* CatalogViewController.swift */,
 				FABFA6A7210CE3B300F15491 /* RegisterViewController.swift */,
+				FA29956A2115A33000AD8ABD /* ProfileViewController.swift */,
+				FA29956E2115AE0200AD8ABD /* DataChangeViewController.swift */,
+				FA9CE3E5210CC52F004F88DA /* CatalogViewController.swift */,
+				FA2995732115BB8700AD8ABD /* ProductViewController.swift */,
+				FA29956C2115AA5F00AD8ABD /* TabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -229,6 +248,7 @@
 		FA704C5920EA850C009DA360 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				FA2995702115B08400AD8ABD /* Segues */,
 				FA9CE3E2210CC3AB004F88DA /* ViewCells */,
 				FA5E0E05210C77D400E19969 /* ViewControllers */,
 				FA7CD4E92108D60D00639FFC /* Storyboards */,
@@ -668,17 +688,21 @@
 				FAA614BA20F1F3D9005F2639 /* ResponseCodable.swift in Sources */,
 				FA84DB2A20F3BFB1005BD30A /* Catalog.swift in Sources */,
 				FA7DCAAD20F9EF31004B9253 /* Review.swift in Sources */,
+				FA2995742115BB8700AD8ABD /* ProductViewController.swift in Sources */,
 				FAF0519720E93B3A001D2F66 /* AppDelegate.swift in Sources */,
+				FA29956F2115AE0200AD8ABD /* DataChangeViewController.swift in Sources */,
 				FA7DCAAF20F9F189004B9253 /* ReviewRequestFactory.swift in Sources */,
 				FAA614B620F1F263005F2639 /* ErrorParser.swift in Sources */,
 				FAA614A920F1F15F005F2639 /* Auth.swift in Sources */,
 				FA384FEA20F2868100A3ADFC /* RequestFactory.swift in Sources */,
 				FA9CE3E4210CC3D0004F88DA /* CatalogViewCell.swift in Sources */,
 				FAA614B220F1F22B005F2639 /* AbstractErrorParser.swift in Sources */,
+				FA29956B2115A33000AD8ABD /* ProfileViewController.swift in Sources */,
 				FA84DB2C20F3C16C005BD30A /* ShoppingRequestFactory.swift in Sources */,
 				FAA614AF20F1F1D9005F2639 /* User.swift in Sources */,
 				FAA614C220F20897005F2639 /* ProfileRequestFactory.swift in Sources */,
 				FAA614CA20F24D69005F2639 /* UserData.swift in Sources */,
+				FA29956D2115AA5F00AD8ABD /* TabBarController.swift in Sources */,
 				FA7DCAAB20F9EC49004B9253 /* Comment.swift in Sources */,
 				FAA614AB20F1F195005F2639 /* AuthRequestFactory.swift in Sources */,
 				FAA614C020F207DF005F2639 /* Profile.swift in Sources */,
