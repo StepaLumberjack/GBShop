@@ -227,13 +227,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		FA5E0E06210C78D700E19969 /* DataTransferObjects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataTransferObjects;
-			sourceTree = "<group>";
-		};
 		FA704C5820EA84F8009DA360 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +288,6 @@
 		FA704C5F20EA855A009DA360 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				FA5E0E06210C78D700E19969 /* DataTransferObjects */,
 				FAA614AE20F1F1D9005F2639 /* User.swift */,
 				FAA614C720F24D35005F2639 /* Register.swift */,
 				FAA614C920F24D69005F2639 /* UserData.swift */,
