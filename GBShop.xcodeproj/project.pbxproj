@@ -56,6 +56,9 @@
 		FAA614C820F24D35005F2639 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C720F24D35005F2639 /* Register.swift */; };
 		FAA614CA20F24D69005F2639 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614C920F24D69005F2639 /* UserData.swift */; };
 		FAA614CC20F25821005F2639 /* BaseRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA614CB20F25821005F2639 /* BaseRequestFactory.swift */; };
+		FAAADE7D211723F00013324C /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAADE7C211723F00013324C /* Basket.swift */; };
+		FAAADE7F211728B90013324C /* BasketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAADE7E211728B90013324C /* BasketViewCell.swift */; };
+		FAAADE8121172A0C0013324C /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAADE8021172A0C0013324C /* BasketViewController.swift */; };
 		FAB3E26F210083A1002871A3 /* addToBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E26E210083A1002871A3 /* addToBasket.json */; };
 		FAB3E271210083C1002871A3 /* deleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E270210083C1002871A3 /* deleteFromBasket.json */; };
 		FAB3E273210083EC002871A3 /* payOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3E272210083EC002871A3 /* payOrder.json */; };
@@ -138,6 +141,9 @@
 		FAA614C720F24D35005F2639 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FAA614C920F24D69005F2639 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FAA614CB20F25821005F2639 /* BaseRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestFactory.swift; sourceTree = "<group>"; };
+		FAAADE7C211723F00013324C /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		FAAADE7E211728B90013324C /* BasketViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewCell.swift; sourceTree = "<group>"; };
+		FAAADE8021172A0C0013324C /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		FAB3E26E210083A1002871A3 /* addToBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addToBasket.json; sourceTree = "<group>"; };
 		FAB3E270210083C1002871A3 /* deleteFromBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = deleteFromBasket.json; sourceTree = "<group>"; };
 		FAB3E272210083EC002871A3 /* payOrder.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payOrder.json; sourceTree = "<group>"; };
@@ -206,13 +212,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FA2995702115B08400AD8ABD /* Segues */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Segues;
-			sourceTree = "<group>";
-		};
 		FA5E0E05210C77D400E19969 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +222,7 @@
 				FA9CE3E5210CC52F004F88DA /* CatalogViewController.swift */,
 				FA2995732115BB8700AD8ABD /* ProductViewController.swift */,
 				FA29956C2115AA5F00AD8ABD /* TabBarController.swift */,
+				FAAADE8021172A0C0013324C /* BasketViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -248,7 +248,6 @@
 		FA704C5920EA850C009DA360 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				FA2995702115B08400AD8ABD /* Segues */,
 				FA9CE3E2210CC3AB004F88DA /* ViewCells */,
 				FA5E0E05210C77D400E19969 /* ViewControllers */,
 				FA7CD4E92108D60D00639FFC /* Storyboards */,
@@ -302,6 +301,7 @@
 				FAA614C920F24D69005F2639 /* UserData.swift */,
 				FA84DB2920F3BFB1005BD30A /* Catalog.swift */,
 				FA7DCAAA20F9EC49004B9253 /* Comment.swift */,
+				FAAADE7C211723F00013324C /* Basket.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -353,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				FA9CE3E3210CC3D0004F88DA /* CatalogViewCell.swift */,
+				FAAADE7E211728B90013324C /* BasketViewCell.swift */,
 			);
 			path = ViewCells;
 			sourceTree = "<group>";
@@ -677,7 +678,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAADE8121172A0C0013324C /* BasketViewController.swift in Sources */,
 				FABFA6A8210CE3B300F15491 /* RegisterViewController.swift in Sources */,
+				FAAADE7D211723F00013324C /* Basket.swift in Sources */,
 				FA7CD4ED2108DA6600639FFC /* AuthViewController.swift in Sources */,
 				FAA614B420F1F248005F2639 /* AbstractRequestFactory.swift in Sources */,
 				FA9CE3E6210CC52F004F88DA /* CatalogViewController.swift in Sources */,
@@ -700,6 +703,7 @@
 				FA29956B2115A33000AD8ABD /* ProfileViewController.swift in Sources */,
 				FA84DB2C20F3C16C005BD30A /* ShoppingRequestFactory.swift in Sources */,
 				FAA614AF20F1F1D9005F2639 /* User.swift in Sources */,
+				FAAADE7F211728B90013324C /* BasketViewCell.swift in Sources */,
 				FAA614C220F20897005F2639 /* ProfileRequestFactory.swift in Sources */,
 				FAA614CA20F24D69005F2639 /* UserData.swift in Sources */,
 				FA29956D2115AA5F00AD8ABD /* TabBarController.swift in Sources */,
