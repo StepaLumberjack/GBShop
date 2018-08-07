@@ -24,4 +24,8 @@ protocol ShoppingRequestFactory {
     func payOrder(
         idOrder: Int,
         completionHandler: @escaping (DataResponse<SuccessResult>) -> Void)
+    
+    func getBasket(
+        idUser: Int,
+        completionHandler: @escaping (DataResponse<BasketResult>) -> Void)
 }

@@ -32,6 +32,11 @@ class AuthViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showChoiceFromLogin" {
+            let vc = segue.destination as! TabBarController
+            vc.id = String(self.userData.user.id)
+            vc.username = self.userData.user.login
+            vc.firstname = self.userData.user.name
+            vc.lastname = self.userData.user.lastname
         }
     }
 

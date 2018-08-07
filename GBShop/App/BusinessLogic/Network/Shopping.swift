@@ -34,6 +34,11 @@ class Shopping: BaseRequestFactory, ShoppingRequestFactory {
         let requestModel = Payment(baseUrl: baseUrl, idOrder: idOrder)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
+    
+    func getBasket(idUser: Int, completionHandler: @escaping (DataResponse<BasketResult>) -> Void) {
+        let requestModel = Basket(baseUrl: baseUrl, idUser: idUser)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
 }
 
 extension Shopping {
@@ -113,6 +118,21 @@ extension Shopping {
         var parameters: Parameters? {
             return [
                 "id_order": idOrder
+            ]
+        }
+    }
+    
+    // MARK: - Get basket request router
+    struct Basket: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "getBasket.json"
+        
+        let idUser: Int
+        
+        var parameters: Parameters? {
+            return [
+                "id_user": idUser
             ]
         }
     }
