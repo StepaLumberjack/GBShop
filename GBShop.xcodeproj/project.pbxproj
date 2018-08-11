@@ -38,6 +38,7 @@
 		FA84DB3620F3D90E005BD30A /* getGoodById.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB3520F3D90E005BD30A /* getGoodById.json */; };
 		FA84DB3820F3D932005BD30A /* ShoppingRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84DB3720F3D932005BD30A /* ShoppingRequestFactoryTests.swift */; };
 		FA856F8A211F0F1B007839EC /* TrackableMixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856F89211F0F1B007839EC /* TrackableMixin.swift */; };
+		FA856F8D211F5396007839EC /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856F8C211F5396007839EC /* SnapshotHelper.swift */; };
 		FA9A5E7720F9F95500DA26A6 /* addReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7620F9F95500DA26A6 /* addReview.json */; };
 		FA9A5E7920F9F98500DA26A6 /* approveReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7820F9F98500DA26A6 /* approveReview.json */; };
 		FA9A5E7D20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */; };
@@ -123,6 +124,7 @@
 		FA84DB3520F3D90E005BD30A /* getGoodById.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getGoodById.json; sourceTree = "<group>"; };
 		FA84DB3720F3D932005BD30A /* ShoppingRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRequestFactoryTests.swift; sourceTree = "<group>"; };
 		FA856F89211F0F1B007839EC /* TrackableMixin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableMixin.swift; sourceTree = "<group>"; };
+		FA856F8C211F5396007839EC /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		FA9A5E7620F9F95500DA26A6 /* addReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addReview.json; sourceTree = "<group>"; };
 		FA9A5E7820F9F98500DA26A6 /* approveReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = approveReview.json; sourceTree = "<group>"; };
 		FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactoryTests.swift; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 		FAF051B520E93B3A001D2F66 /* GBShopUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FA856F8C211F5396007839EC /* SnapshotHelper.swift */,
 				FAF051B620E93B3A001D2F66 /* GBShopUITests.swift */,
 				FAF051B820E93B3A001D2F66 /* Info.plist */,
 			);
@@ -752,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF051B720E93B3A001D2F66 /* GBShopUITests.swift in Sources */,
+				FA856F8D211F5396007839EC /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,14 +902,19 @@
 			baseConfigurationReference = 1EF757FDDCE9AA12AC3BDA26 /* Pods-GBShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GBShop/Enviroments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "feel-good-inc.GBShop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -914,14 +923,19 @@
 			baseConfigurationReference = 0397933871937213C9A9D96F /* Pods-GBShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GBShop/Enviroments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "feel-good-inc.GBShop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
