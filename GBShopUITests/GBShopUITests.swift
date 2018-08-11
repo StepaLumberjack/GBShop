@@ -11,6 +11,7 @@ class GBShopUITests: XCTestCase {
         continueAfterFailure = false
         
         app = XCUIApplication()
+        setupSnapshot(app)
         app.launch()
     }
     
@@ -28,6 +29,7 @@ class GBShopUITests: XCTestCase {
         passwordTextField.tap()
         passwordTextField.typeText("mypassword")
         
+        snapshot("FirstScreen")
         app.buttons["Войти"].tap()
     }
     

@@ -20,6 +20,40 @@ platform :ios do
   lane :custom_lane do
     
     ensure_git_status_clean
+    clear_derived_data
+    xcclean(
+    	scheme: "GBShop",
+    	workspace: "GBShop.xcworkspace"
+    )
+
+    cocoapods(
+     use_bundle_exec: false
+    )
+
+    run_tests
+    capture_ios_screenshots
+
+    increment_build_number
+    set_info_plist_value(path: "./GBShop/Enviroments/Info.plist", key: "CFBundleShortVersionString", value: "5.0")
+
+    # gym(
+    # 	scheme: "GBShop",
+    # 	configuration: "Debug",
+    # 	export_method: "development",
+    # 	include_symbols: true,
+    # 	include_bitcode: true,
+    # 	silent: false
+    # ) - Не работает без аккаунта разработчика :(
+
+    versionNumber = get_version_number
+    buildNumber = get_build_number
+    tag = "#{versionNumber}.#{buildNumber}"
+
+    git_add(path: ["./Podfile.lock", "./GBShop.xcodeproj/project.pbxproj", "./GBShopTests/Info.plist", "./GBShop/Enviroments/Info.plist", "./GBShopUITests/Info.plist"])
+    git_commit(path: ["./Podfile.lock", "./GBShop.xcodeproj/project.pbxproj", "./GBShopTests/Info.plist", "./GBShop/Enviroments/Info.plist", "./GBShopUITests/Info.plist"], message: "version up")
+    add_git_tag(
+    	tag: tag
+    )
 
   end
 end
