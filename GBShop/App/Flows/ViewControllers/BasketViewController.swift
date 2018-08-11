@@ -1,7 +1,7 @@
 
 import UIKit
 
-class BasketViewController: UITableViewController {
+class BasketViewController: UITableViewController, TrackableMixin {
     
     let requestFactory = RequestFactory()
     var products: [BasketGoods] = []
@@ -18,14 +18,19 @@ class BasketViewController: UITableViewController {
         let basket: ShoppingRequestFactory = requestFactory.makeShoppingRequestFatory()
         basket.getBasket(idUser: 123) { response in
             switch response.result {
+                
             case .success(let basketData):
+                
                 DispatchQueue.main.async {
                     print(basketData)
                     self.totalPrice.text = String(basketData.amount)
                     self.totalCount.text = String(basketData.countGoods)
                     self.products = basketData.contents
                     self.tableView.reloadData()
+                    
+                    self.track(.viewBasket)
                 }
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }

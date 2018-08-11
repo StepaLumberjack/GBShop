@@ -37,6 +37,7 @@
 		FA84DB3420F3D810005BD30A /* changeUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB3320F3D810005BD30A /* changeUserData.json */; };
 		FA84DB3620F3D90E005BD30A /* getGoodById.json in Resources */ = {isa = PBXBuildFile; fileRef = FA84DB3520F3D90E005BD30A /* getGoodById.json */; };
 		FA84DB3820F3D932005BD30A /* ShoppingRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84DB3720F3D932005BD30A /* ShoppingRequestFactoryTests.swift */; };
+		FA856F8A211F0F1B007839EC /* TrackableMixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856F89211F0F1B007839EC /* TrackableMixin.swift */; };
 		FA9A5E7720F9F95500DA26A6 /* addReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7620F9F95500DA26A6 /* addReview.json */; };
 		FA9A5E7920F9F98500DA26A6 /* approveReview.json in Resources */ = {isa = PBXBuildFile; fileRef = FA9A5E7820F9F98500DA26A6 /* approveReview.json */; };
 		FA9A5E7D20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */; };
@@ -121,6 +122,7 @@
 		FA84DB3320F3D810005BD30A /* changeUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = changeUserData.json; sourceTree = "<group>"; };
 		FA84DB3520F3D90E005BD30A /* getGoodById.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getGoodById.json; sourceTree = "<group>"; };
 		FA84DB3720F3D932005BD30A /* ShoppingRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRequestFactoryTests.swift; sourceTree = "<group>"; };
+		FA856F89211F0F1B007839EC /* TrackableMixin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableMixin.swift; sourceTree = "<group>"; };
 		FA9A5E7620F9F95500DA26A6 /* addReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = addReview.json; sourceTree = "<group>"; };
 		FA9A5E7820F9F98500DA26A6 /* approveReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = approveReview.json; sourceTree = "<group>"; };
 		FA9A5E7C20F9F9E900DA26A6 /* ReviewRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactoryTests.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 		FA704C5E20EA8550009DA360 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				FA856F8B211F14B2007839EC /* Analytics */,
 				FAA614A720F1F0E7005F2639 /* AppDelegate */,
 				FAA614A620F1F0E0005F2639 /* Network */,
 			);
@@ -339,6 +342,14 @@
 				FAB3E272210083EC002871A3 /* payOrder.json */,
 			);
 			path = Stubs;
+			sourceTree = "<group>";
+		};
+		FA856F8B211F14B2007839EC /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				FA856F89211F0F1B007839EC /* TrackableMixin.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		FA9CE3E2210CC3AB004F88DA /* ViewCells */ = {
@@ -455,6 +466,7 @@
 				FAF0519020E93B3A001D2F66 /* Frameworks */,
 				FAF0519120E93B3A001D2F66 /* Resources */,
 				14D94E32FC76B05794D27552 /* [CP] Embed Pods Frameworks */,
+				FA856F88211F03A7007839EC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -645,6 +657,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA856F88211F03A7007839EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 414c2cb465a33f0f280b7e1a523a7089da99381b c194ca0c1bf7fcef7ddfcdc70efec657b99e42ef8c28e7cc8f40b05fd2e15ef1";
+		};
 		FBD0E0A82FCF22727462EC81 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -697,6 +722,7 @@
 				FAA614AF20F1F1D9005F2639 /* User.swift in Sources */,
 				FAAADE7F211728B90013324C /* BasketViewCell.swift in Sources */,
 				FAA614C220F20897005F2639 /* ProfileRequestFactory.swift in Sources */,
+				FA856F8A211F0F1B007839EC /* TrackableMixin.swift in Sources */,
 				FAA614CA20F24D69005F2639 /* UserData.swift in Sources */,
 				FA29956D2115AA5F00AD8ABD /* TabBarController.swift in Sources */,
 				FA7DCAAB20F9EC49004B9253 /* Comment.swift in Sources */,
@@ -875,6 +901,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GBShop/Enviroments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "feel-good-inc.GBShop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -890,6 +917,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GBShop/Enviroments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "feel-good-inc.GBShop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

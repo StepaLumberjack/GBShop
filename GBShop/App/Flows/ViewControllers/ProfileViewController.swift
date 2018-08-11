@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, TrackableMixin {
 
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var username: UILabel!
@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController {
         self.username.text = tabbarController.username
         self.firstname.text = tabbarController.firstname
         self.lastname.text = tabbarController.lastname
+        
+        self.track(.viewProfile)
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
@@ -31,6 +33,8 @@ class ProfileViewController: UIViewController {
         auth.logout { response in
             switch response.result {
             case .success(let logout):
+                self.track(.logout)
+                
                 self.logout = logout
                 print(logout)
                 DispatchQueue.main.async {

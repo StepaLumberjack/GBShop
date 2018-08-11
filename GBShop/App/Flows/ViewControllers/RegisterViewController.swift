@@ -1,7 +1,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, TrackableMixin {
     
     let requestFactory = RequestFactory()
 
@@ -39,9 +39,13 @@ class RegisterViewController: UIViewController {
         register.register(userData: userData) { response in
             switch response.result {
             case .success(let register):
+                self.track(.register(success: true))
+                
                 print(register)
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "showChoiceFromRegister", sender: self)
+                    
+                    self.track(.login(method: .fromRegisterView, success: true))
                 }
             case .failure(let error):
                 print(error.localizedDescription)

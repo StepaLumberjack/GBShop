@@ -1,6 +1,6 @@
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, TrackableMixin {
     
     let requestFactory = RequestFactory()
     var userData: LoginResult!
@@ -11,6 +11,7 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     @IBAction func authButtonPressed(_ sender: Any) {
         guard let userName = loginTextField.text else { return }
         guard let password = passwordTextField.text else { return }
@@ -19,12 +20,17 @@ class AuthViewController: UIViewController {
         auth.login(userName: userName, password: password) { response in
             switch response.result {
             case .success(let login):
+                self.track(.login(method: .fromLoginView, success: true))
+                
                 self.userData = login
                 print(login)
+                
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "showChoiceFromLogin", sender: self)
                 }
             case .failure(let error):
+                self.track(.login(method: .fromLoginView, success: false))
+                
                 print(error.localizedDescription)
             }
         }

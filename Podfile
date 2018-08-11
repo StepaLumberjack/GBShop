@@ -7,6 +7,8 @@ target 'GBShop' do
 
   pod 'Alamofire', '~> 4.7'
   pod 'OHHTTPStubs/Swift'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'GBShopTests' do
     inherit! :search_paths

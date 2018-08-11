@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ProductViewController: UIViewController {
+class ProductViewController: UIViewController, TrackableMixin {
     
     let requestFactory = RequestFactory()
     var productId = 0
@@ -20,24 +20,35 @@ class ProductViewController: UIViewController {
         let product: ShoppingRequestFactory = requestFactory.makeShoppingRequestFatory()
         product.getProduct(idProduct: productId) { response in
             switch response.result {
+                
             case .success(let product):
+                self.track(.viewProduct)
+                
                 print(product)
+                
                 DispatchQueue.main.async {
                     self.prodName.text = product.product_name
                     self.prodPrice.text = String(product.product_price)
                     self.prodDescription.text = product.product_description
                 }
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
+    
     @IBAction func addToBasket(_ sender: Any) {
         let basket: ShoppingRequestFactory = requestFactory.makeShoppingRequestFatory()
+        
         basket.addToCart(idProduct: productId, quantity: 1) { response in
             switch response.result {
+                
             case .success(let addItemResult):
+                self.track(.addToBasket)
+                
                 print(addItemResult)
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }

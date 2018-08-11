@@ -1,7 +1,7 @@
 
 import UIKit
 
-class CatalogViewController: UITableViewController {
+class CatalogViewController: UITableViewController, TrackableMixin {
 
     let requestFactory = RequestFactory()
     var catalog: [CatalogResult] = [CatalogResult]()
@@ -18,6 +18,7 @@ class CatalogViewController: UITableViewController {
             switch response.result {
                 
             case .success(let products):
+                self.track(.viewCatalog)
                 
                 for product in products {
                     self.catalog.append(
